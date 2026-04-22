@@ -5,6 +5,41 @@ import { submitRequestReview } from "../services/api";
 
 const API_URL = "http://localhost:5001/api";
 
+const buildTimeline = (request) => {
+  const hasMessages = Array.isArray(request.messages) && request.messages.length > 0;
+  const hasBudget = Boolean(request.budget);
+  const hasReview = Boolean(request.review);
+
+  return [
+    {
+      title: "Match criado",
+      description: "Cliente e prestador agora podem conversar.",
+      active: true
+    },
+    {
+      title: "Mensagens trocadas",
+      description: hasMessages
+        ? "As partes ja iniciaram a conversa."
+        : "Aguardando a primeira mensagem no chat.",
+      active: hasMessages
+    },
+    {
+      title: "Orcamento enviado",
+      description: hasBudget
+        ? `Valor atual definido em R$ ${request.budget}.`
+        : "O prestador ainda nao enviou um valor.",
+      active: hasBudget
+    },
+    {
+      title: "Avaliacao publicada",
+      description: hasReview
+        ? "O atendimento ja recebeu uma avaliacao publica."
+        : "A avaliacao pode ser enviada ao final do atendimento.",
+      active: hasReview
+    }
+  ];
+};
+
 const ServiceRequest = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -99,6 +134,7 @@ const ServiceRequest = () => {
     user?.type === "cliente" &&
     user?._id === request.client?._id &&
     !request.review;
+  const timeline = buildTimeline(request);
 
   const handleSubmitReview = async ({ rating, comment }) => {
     try {
@@ -157,6 +193,24 @@ const ServiceRequest = () => {
             {request.budget ? `R$ ${request.budget}` : "Ainda não definido"}
           </strong>
         </p>
+
+        <section className="timeline-section">
+          <h3>Linha do tempo do atendimento</h3>
+          <div className="timeline-list">
+            {timeline.map((step, index) => (
+              <article
+                key={step.title}
+                className={`timeline-item ${step.active ? "timeline-item-active" : ""}`}
+              >
+                <div className="timeline-marker">{index + 1}</div>
+                <div>
+                  <strong>{step.title}</strong>
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <div className="request-chat-box">
           {(request.messages || []).length === 0 && (

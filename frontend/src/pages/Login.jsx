@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <main className="auth-shell">
       <section className="auth-hero">
-        <span className="auth-badge">App Servicos</span>
+        <span className="auth-badge">App Serviços</span>
         <h1>Contrate com mais confiança e encontre profissionais por perto.</h1>
         <p>
           Veja prestadores avaliados, compare serviços e acompanhe suas

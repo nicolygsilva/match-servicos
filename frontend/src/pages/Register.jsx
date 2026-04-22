@@ -33,7 +33,7 @@ const Register = () => {
   return (
     <main className="auth-shell">
       <section className="auth-hero">
-        <span className="auth-badge">Novo cadastro</span>
+        <span className="auth-badge">App Serviços</span>
         <h1>Crie seu perfil e comece a contratar ou atender hoje.</h1>
         <p>
           Clientes encontram profissionais com mais facilidade e prestadores

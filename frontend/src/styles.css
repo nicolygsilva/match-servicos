@@ -601,6 +601,58 @@ a {
   margin-top: 0;
 }
 
+.timeline-section {
+  margin: 24px 0;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.timeline-section h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.timeline-list {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 12px 0;
+  opacity: 0.75;
+}
+
+.timeline-item-active {
+  opacity: 1;
+}
+
+.timeline-marker {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--surface-dark);
+  background: rgba(31, 122, 140, 0.12);
+}
+
+.timeline-item-active .timeline-marker {
+  color: #fffaf5;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+.timeline-item p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
 .request-chat-box {
   margin-top: 18px;
   min-height: 240px;

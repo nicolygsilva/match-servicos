@@ -275,7 +275,7 @@ const Home = () => {
         <section className="home-hero">
           <div>
             <span className="section-badge">Painel do cliente</span>
-            <h1>Prestadores bem avaliados e perto de voce.</h1>
+            <h1>Prestadores bem avaliados e perto de você.</h1>
             <p>
               Escolha com base em especialidade, reputação e proximidade para
               pedir atendimento, ver avaliações públicas e iniciar um match com
@@ -303,7 +303,8 @@ const Home = () => {
 
         <section className="section-header">
           <div>
-            <h2>Profissionais em destaque</h2>
+            <h2>Outros profissionais disponíveis</h2>
+            <p>Continue explorando opções, mesmo que você já tenha conversas em andamento.</p>
           </div>
         </section>
 
@@ -312,7 +313,7 @@ const Home = () => {
             <section className="section-header">
               <div>
                 <h2>Seus chats ativos</h2>
-                <p>Retome conversas e acompanhe orçamentos quando quiser.</p>
+                <p>Retome conversas, compare respostas e acompanhe orçamentos quando quiser.</p>
               </div>
             </section>
 
