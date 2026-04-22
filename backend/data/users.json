@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "4",
+    "name": "cliente",
+    "email": "cliente@teste.com",
+    "password": "1234",
+    "type": "cliente",
+    "service": "encanamento",
+    "bio": "",
+    "zipCode": "74650-000",
+    "address": "Otacilio Negrão de Lima",
+    "neighborhood": "Pampulha",
+    "city": "Belo Horizonte",
+    "latitude": 0,
+    "longitude": 0
+  },
+  {
+    "_id": "5",
+    "name": "prestador",
+    "email": "prestador@teste.com",
+    "password": "1234",
+    "type": "prestador",
+    "service": "Encanamento",
+    "rating": 5,
+    "distance": 3.5,
+    "bio": "encanamento",
+    "zipCode": "74650-000",
+    "address": "Otacilio Negrão de lima",
+    "neighborhood": "Pampulha",
+    "city": "Belo Horizonte",
+    "latitude": 0,
+    "longitude": 0,
+    "budgetAverage": 180,
+    "reviews": [
+      {
+        "id": "r1776893982718",
+        "authorId": "4",
+        "authorName": "cliente",
+        "rating": 5,
+        "comment": "teste",
+        "createdAt": "2026-04-22T21:39:42.718Z"
+      },
+      {
+        "id": "r1776893556370",
+        "authorId": "4",
+        "authorName": "cliente",
+        "rating": 5,
+        "comment": "teste",
+        "createdAt": "2026-04-22T21:32:36.370Z"
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "name": "cliente teste dois",
+    "email": "teste@cliente.com",
+    "password": "1234",
+    "type": "cliente",
+    "service": "encanamento",
+    "bio": "",
+    "zipCode": "74650-000",
+    "address": "Rua Otacílio Negrão de Lima",
+    "neighborhood": "Pampulha",
+    "city": "Belo Horizonte",
+    "latitude": 0,
+    "longitude": 0
+  }
+]
